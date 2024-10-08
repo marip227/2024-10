@@ -1,6 +1,9 @@
 const express = require("express");
+const pokemonMockrouter = require("./routes/pokemonMock.js")
 
 const app = express();
+
+app.use(pokemonMockrouter);
 
 app.get("/", (req,res) => {
     res.send("Bienvenidos");
